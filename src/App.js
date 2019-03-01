@@ -6,13 +6,18 @@ import ItemList from "./Components/ItemList";
 
 class App extends Component {
   state = {};
+
+  updateItems = () => {
+    const retrievedItems = JSON.parse(localStorage.getItem("items"));
+    this.setState({ items: retrievedItems });
+  };
+
   componentWillMount() {
     const currentItems = JSON.parse(localStorage.getItem("items"));
     if (!currentItems) {
       localStorage.setItem("items", "[]");
     }
     const retrievedItems = JSON.parse(localStorage.getItem("items"));
-    console.log(retrievedItems);
     this.setState({ items: retrievedItems });
   }
   render() {
@@ -23,7 +28,7 @@ class App extends Component {
           <div className="row">
             <div className="col m2" />
             <div className="col s12 m8">
-              <AddItem />
+              <AddItem update={this.updateItems} />
               <ItemList items={this.state} />
             </div>
             <div className="col m2" />

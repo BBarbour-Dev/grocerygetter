@@ -40,6 +40,8 @@ class AddItem extends Component {
       store: "",
       error: ""
     });
+
+    this.props.update();
   };
 
   onChange = e => {
