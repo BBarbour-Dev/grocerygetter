@@ -12,12 +12,9 @@ class AddItem extends Component {
 
   toLocalStorage = item => {
     const currentItems = JSON.parse(localStorage.getItem("items"));
-    if (currentItems) {
-      currentItems.push(item);
-      localStorage.setItem("items", JSON.stringify(currentItems));
-    } else {
-      localStorage.setItem("items", JSON.stringify(item));
-    }
+    const newItems = [...currentItems, item];
+    console.log(JSON.stringify(newItems));
+    localStorage.setItem("items", JSON.stringify(newItems));
   };
 
   onSubmit = e => {
@@ -28,14 +25,12 @@ class AddItem extends Component {
       return;
     }
 
-    const newItem = [
-      {
-        id: uuid(),
-        item,
-        price,
-        store
-      }
-    ];
+    const newItem = {
+      id: uuid(),
+      item,
+      price,
+      store
+    };
 
     this.toLocalStorage(newItem);
 

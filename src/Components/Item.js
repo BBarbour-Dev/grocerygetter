@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Item extends Component {
   render() {
     const { item, price, store } = this.props.item;
+    console.log(item);
     return (
       <li className="collection-item avatar">
         <i className="material-icons circle teal darken-1">
