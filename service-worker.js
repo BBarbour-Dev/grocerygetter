@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/grocerygetter/precache-manifest.078045883682a477bc0ae811cef02e0e.js"
+  "/grocerygetter/precache-manifest.911e2beddaf0b2eadef9e1b510248945.js"
 );
 
 workbox.clientsClaim();
