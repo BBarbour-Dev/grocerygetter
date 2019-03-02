@@ -32,6 +32,26 @@ class Item extends Component {
   render() {
     const { item, price, store, checked } = this.props.item;
 
+    const dollarSign = "$",
+      dash = "-";
+
+    const priceSection = (
+      <p>
+        {price && (
+          <span>
+            {dollarSign}
+            {price}
+          </span>
+        )}{" "}
+        {store && (
+          <em>
+            {" "}
+            {dash} {store}
+          </em>
+        )}
+      </p>
+    );
+
     const groceryGet = (
       <li className="collection-item avatar">
         <i
@@ -41,11 +61,7 @@ class Item extends Component {
           add_shopping_cart
         </i>
         <span className="title grocery-item">{item}</span>
-        {(price, store) && (
-          <p>
-            {price} - <em>{store}</em>
-          </p>
-        )}
+        {priceSection}
         <span className="secondary-content">
           <i
             className="material-icons red-text point"
@@ -68,11 +84,7 @@ class Item extends Component {
         <span className="title grocery-item">
           <s>{item}</s>
         </span>
-        {(price, store) && (
-          <p>
-            {price} - <em>{store}</em>
-          </p>
-        )}
+        {priceSection}
         <span className="secondary-content">
           <i
             className="material-icons red-text point"
