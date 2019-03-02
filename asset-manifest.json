@@ -1,13 +1,13 @@
 {
   "main.css": "/grocerygetter/static/css/main.28854330.chunk.css",
-  "main.js": "/grocerygetter/static/js/main.37a932d2.chunk.js",
-  "main.js.map": "/grocerygetter/static/js/main.37a932d2.chunk.js.map",
+  "main.js": "/grocerygetter/static/js/main.ccf0e49a.chunk.js",
+  "main.js.map": "/grocerygetter/static/js/main.ccf0e49a.chunk.js.map",
   "runtime~main.js": "/grocerygetter/static/js/runtime~main.e12388f5.js",
   "runtime~main.js.map": "/grocerygetter/static/js/runtime~main.e12388f5.js.map",
   "static/js/2.0c806c03.chunk.js": "/grocerygetter/static/js/2.0c806c03.chunk.js",
   "static/js/2.0c806c03.chunk.js.map": "/grocerygetter/static/js/2.0c806c03.chunk.js.map",
   "index.html": "/grocerygetter/index.html",
-  "precache-manifest.148c9f6a0850572ec20516f9713c6945.js": "/grocerygetter/precache-manifest.148c9f6a0850572ec20516f9713c6945.js",
+  "precache-manifest.bbacce5c95240d1d372e6945bf5dcfbb.js": "/grocerygetter/precache-manifest.bbacce5c95240d1d372e6945bf5dcfbb.js",
   "service-worker.js": "/grocerygetter/service-worker.js",
   "static/css/main.28854330.chunk.css.map": "/grocerygetter/static/css/main.28854330.chunk.css.map"
 }
