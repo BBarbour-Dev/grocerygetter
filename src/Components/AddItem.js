@@ -18,6 +18,13 @@ class AddItem extends Component {
       return;
     }
 
+    let dollarReg = /^\d+(?:\.\d{0,2})$/;
+
+    if (!dollarReg.test(price)) {
+      this.setState({ error: "Enter dollar amount." });
+      return;
+    }
+
     const newItem = {
       id: uuid(),
       item,
@@ -59,7 +66,7 @@ class AddItem extends Component {
                   onChange={this.onChange}
                 />
                 <TextInput
-                  label="Price"
+                  label="$ Price"
                   name="price"
                   type="text"
                   value={price}
