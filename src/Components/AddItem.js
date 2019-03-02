@@ -10,13 +10,6 @@ class AddItem extends Component {
     error: ""
   };
 
-  toLocalStorage = item => {
-    const currentItems = JSON.parse(localStorage.getItem("items"));
-    const newItems = [...currentItems, item];
-    console.log(JSON.stringify(newItems));
-    localStorage.setItem("items", JSON.stringify(newItems));
-  };
-
   onSubmit = e => {
     e.preventDefault();
     const { item, price, store } = this.state;
@@ -29,10 +22,11 @@ class AddItem extends Component {
       id: uuid(),
       item,
       price,
-      store
+      store,
+      checked: false
     };
 
-    this.toLocalStorage(newItem);
+    this.props.store(newItem);
 
     this.setState({
       item: "",

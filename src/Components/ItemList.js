@@ -9,9 +9,12 @@ class ItemList extends Component {
         <div className="card-panel">
           <ul className="collection with-header">
             <li className="collection-header">
-              <h4>List</h4>
-              {items && items.map(item => <Item key={item.id} item={item} />)}
+              <h4 className="center-align">List</h4>
             </li>
+            {items &&
+              items.map(item => (
+                <Item key={item.id} item={item} update={this.props.update} />
+              ))}
           </ul>
         </div>
       </div>
