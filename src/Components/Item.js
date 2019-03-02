@@ -22,7 +22,7 @@ class Item extends Component {
       if (currentItems.length === 1) {
         localStorage.setItem("items", "[]");
       } else {
-        const newItems = currentItems.filter(item => item.id === id);
+        const newItems = currentItems.filter(item => item.id !== id);
         localStorage.setItem("items", JSON.stringify(newItems));
       }
       this.props.update();
