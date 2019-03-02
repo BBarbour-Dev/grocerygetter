@@ -20,7 +20,7 @@ class AddItem extends Component {
 
     let dollarReg = /^\d+(?:\.\d{0,2})$/;
 
-    if (!dollarReg.test(price)) {
+    if (price !== "" && !dollarReg.test(price)) {
       this.setState({ error: "Enter dollar amount." });
       return;
     }

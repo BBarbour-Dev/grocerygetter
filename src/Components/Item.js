@@ -33,7 +33,7 @@ class Item extends Component {
     const { item, price, store, checked } = this.props.item;
 
     const dollarSign = "$",
-      dash = "-";
+      dash = " - ";
 
     const priceSection = (
       <p>
@@ -42,13 +42,9 @@ class Item extends Component {
             {dollarSign}
             {price}
           </span>
-        )}{" "}
-        {store && (
-          <em>
-            {" "}
-            {dash} {store}
-          </em>
         )}
+        {(price, store) && dash}
+        {store && <em>{store}</em>}
       </p>
     );
 
