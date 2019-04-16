@@ -4,4 +4,4 @@ Uses localstorage to store a grocery list. You can check off items you got and a
 
 ##Live Version
 
-(https://steelvoltage.github.io/grocerygetter/)[https://steelvoltage.github.io/grocerygetter/]
+[https://steelvoltage.github.io/grocerygetter/](https://steelvoltage.github.io/grocerygetter/)
